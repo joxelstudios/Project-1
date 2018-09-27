@@ -32,12 +32,20 @@
                         <!-- Photo Upload Input -->
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://via.placeholder.com/200x200" id="emotionDetect-image" class="img-fluid rounded-top" alt="img">
+                                <h4 class="card-title ">Upload a photo or link your Facebook Profile Image</h4>
+                                <img src="https://via.placeholder.com/200x200" id="emotionDetect-image" class="img-fluid rounded-top"
+                                    alt="img">
                                 <hr>
                                 <input id="picture-input" type='file' onchange="readURL(this);" />
+                                <div class="form-group">
+                                    <label for="facebook-link"></label>
+                                    <input type="url" class="form-control" name="facebook-link" id="facebook-link"
+                                        aria-describedby="helpId" placeholder="Paste link to profile image.">
+                                    <small id="helpId" class="form-text text-muted">*Forward facing images work best.</small>
+                                </div>
                                 <br>
                                 <br>
-                                <h3 class="card-title">Upload a photo</h3>
+
                                 <p class="card-text">So we can gauge how you feel.</p>
                             </div>
                         </div>
@@ -67,17 +75,17 @@
             </div>
 
             <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-        <!--****I had to replace the previous jQuery link because the SLIM version did not have the ability to do ajax responses-->
+            <!--****I had to replace the previous jQuery link because the SLIM version did not have the ability to do ajax responses-->
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-    <script src="youtube.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+                crossorigin="anonymous"></script>
+            <script src="youtube.js"></script>
 </body>
 
 </html>
