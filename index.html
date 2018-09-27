@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- Jumbotron Header -->
     <div class="jumbotron text-center">
         <h1 class="display-3">Upload a photo of yourself</h1>
         <p class="lead">and we will recommend music based on your expression.</p>
@@ -22,14 +23,20 @@
 
         </p>
     </div>
+    <!-- Cards -->
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <div class="row">
                     <div class="col-12 text-center">
+                        <!-- Photo Upload Input -->
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded-top" alt="img"> 
+                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded-top" alt="img">
+                                <hr>
+                                <input id="picture-input" type='file' onchange="readURL(this);" />
+                                <br>
+                                <br>
                                 <h3 class="card-title">Upload a photo</h3>
                                 <p class="card-text">So we can gauge how you feel.</p>
                             </div>
@@ -38,16 +45,32 @@
 
                 </div>
             </div>
-        </div>
+            <!-- Uploaded Image / Recommended Thumbnails -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/400x400" class="img-fluid rounded-top" alt="img">
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-            crossorigin="anonymous"></script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/400x400" class="img-fluid rounded-top" alt="img">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
