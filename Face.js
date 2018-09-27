@@ -7,7 +7,7 @@ var parameters = {
 // -F "api_secret=<api_secret>" \
     "api_secret": "-9hs9__kJoKpcPpL9fEPWretNJDk40hf",
 // -F "image_file=@image_file.jpg" \
-    "image_url": "http://images5.fanpop.com/image/polls/980000/980886_1332352047703_full.jpg?v=1332351961",
+    "image_url": "https://i.imgflip.com/vh6to.jpg",
 // -F "return_landmark=1" \
     // "return_landmark": "1",
 // -F "return_attributes=gender,age"
