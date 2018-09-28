@@ -21,89 +21,6 @@
 
 var apiKey = "AIzaSyCidNiMCQoVdkF4cEvUdGbhTut0WujY9D8";
 
-getEntries();
-
-function getEntries() {
-
-    $.ajax({
-        url: "https://gdata.youtube.com/feeds/api/playlists/PL48A83AD3506C9D36?v=2&alt=json",
-        url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL48A83AD3506C9D36&key=" + apiKey,
-        dataType: "jsonp",
-
-        success: function (data) {
-            var video_id = "";
-            $.each(data.items, function (i, item) {
-                video_id = video_id + item.snippet.resourceId.videoId + ',';
-            });
-            video_id = video_id.substring(0, video_id.length - 1);
-            console.log(video_id);
-            console.log(data)
-            $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/videos?part=contentDetails%2Cstatistics%2Csnippet%2Cplayer&id=" + video_id + "&key=" + apiKey,
-                dataType: "jsonp",
-
-                success: function (data) {
-                    $.each(data.items, function (i, item) {
-                        var title = item.snippet.title;
-                        var thumb = item.snippet.thumbnails.default.url;
-                        var numLikes = item.statistics.likeCount;
-                        var numDislikes = item.statistics.dislikeCount;
-                        var viewCount = item.statistics.viewCount;
-
-                        $('#entries tbody').append("<tr><td id='editinplace'>" + title + "</td> <td><img alt='" + title + "' src='" + thumb + "'></img></td><td>" + numLikes + "</td><td>" + numDislikes + "</td><td>" + viewCount + "</td>" + "<td style='display: none' id='delete'><input type='button' class='del' value='Избриши'/></td>" + "</tr>");
-                    });
-                    $("table").trigger("update");
-                    setEditInPlace();
-                }
-            });
-
-            $("table").trigger("update");
-            setEditInPlace();
-        }
-    });
-
-}
-
-setEditInPlace();
-
-function setEditInPlace() {
-    $("td").each(function () {
-        var id = $(this).attr("id");
-        if (id == 'editinplace') {
-            $(this).editInPlace({
-                callback: function (unused, enteredText) {
-                    return enteredText;
-                },
-                show_buttons: true
-            });
-        }
-    });
-}
-$(document).ready(function () {
-
-    $("#entries").tablesorter();
-
-    $("#edit").click(function () {
-        var text = $("#edit").val();
-        if (text == 'Измени') {
-            $("#edit").val('Затвори');
-            $("td").each(function () {
-                var id = $(this).attr("id");
-                if (id == 'delete') $(this).show('slow');
-            });
-        } else {
-            $("#edit").val('Измени');
-            $("td").each(function () {
-                var id = $(this).attr("id");
-                if (id == 'delete') $(this).hide('slow');
-            });
-        }
-    });
-    $('.del').live('click', function () {
-        $(this).parent().parent().remove();
-        $("#entries").trigger("update");
-    });
-});
 
 /////////////////////this code is for the embedded iFrame player
 
@@ -122,7 +39,7 @@ function onYouTubeIframeAPIReady() {
         height: '390',
         width: '640',
         //this part of code determines which video we wanna play.
-        videoId: 'Bkhpiwvvf8k',
+        videoId: 'Va_RU-tph-Y',
         ///////////////////////////////////////////////////////
         events: {
             'onReady': onPlayerReady,
@@ -149,3 +66,36 @@ function onPlayerStateChange(event) {
 function stopVideo() {
     player.stopVideo();
 }
+
+
+var sadness = ["nZq_jeYsbTs","y9Gf-f_hWpU","Va_RU-tph-Y","X--KAhRMaQY","RB-RcX5DS5A","eYUPa2X4aoc","Na2fIC3CXYE","S9bCLPwzSC0","pgN-vvVVxMA","4N3N1MlvVc4"]
+//sadness tunes////////////////////////////////////////
+//Radiohead "How To Disappear Completely" - nZq_jeYsbTs
+//The Smiths "There Is A Light That Never Goes Out" - y9Gf-f_hWpU
+//The Anniversary "All Things Ordinary" - Va_RU-tph-Y
+//Joji "Slow Dancing In The Dark" - X--KAhRMaQY
+//Coldplay "The Scientist" - RB-RcX5DS5A
+//Tame Impala "The Less I Know The Better" - eYUPa2X4aoc
+//nofx "My Orphan Year (Acoustic)" - Na2fIC3CXYE
+//Eminem "Mockingbird"- S9bCLPwzSC0
+//XXXTENTACION "SAD!"- pgN-vvVVxMA
+//Gary Jules "Mad World" - 4N3N1MlvVc4
+
+var happiness = []
+
+
+
+var anger = []
+
+var neutral = ["Kp7eSUU9oy8","6zf6yce6g7g","yvK3t0TdYfQ","_Rf-pixOCEQ"]
+//NEUTRAL TUNES////////////////////////////////////////
+//childish gambino "redbone" - Kp7eSUU9oy8
+//Killedmyself "are you lost?" - 6zf6yce6g7g
+//Morning High "Sativa Satva" - yvK3t0TdYfQ
+//Nosaj Thing "Realize" - _Rf-pixOCEQ
+//
+//
+//
+//
+//
+//
