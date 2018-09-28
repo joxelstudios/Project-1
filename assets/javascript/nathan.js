@@ -29,7 +29,7 @@
   });
   
 
-  var image = "";
+  var image ={};
 
   // Capture Button Click
   $("#picture-submit").on("click", function(event) {
@@ -50,7 +50,7 @@
   
     console.log(sv.image);
 
-    $("#emotionDetect-image").text(sv.image);
+    $("#emotionDetect-image").src(sv.image);
   
    }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);

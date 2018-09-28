@@ -10,11 +10,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
-        <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
-    
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 </head>
 
 <body>
+    <!-- Jumbotron Header -->
     <div class="jumbotron text-center">
         <h1 class="display-3">Upload a photo of yourself</h1>
         <p class="lead">and we will recommend music based on your expression.</p>
@@ -24,47 +24,73 @@
 
         </p>
     </div>
+    <!-- Cards -->
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <div class="row">
                     <div class="col-12 text-center">
+                        <!-- Photo Upload Input -->
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded-top" alt="img"> 
-                                <h3 class="card-title">Upload a photo</h3>
+                                <h4 class="card-title ">Upload a photo or link your Facebook Profile Image</h4>
                                 <p class="card-text">So we can gauge how you feel.</p>
+                                <img src="https://via.placeholder.com/200x200" id="emotionDetect-image" class="img-fluid rounded-top"
+                                    alt="img">
+                                <hr>
+                                <input id="picture-input" type='file' onchange="readURL(this);" />
+                                <div class="form-group">
+                                    <label for="facebook-link"></label>
+                                    <input type="url" class="form-control" name="facebook-link" id="facebook-link"
+                                        aria-describedby="helpId" placeholder="Paste link to profile image.">
+                                    <small id="helpId" class="form-text text-muted">*Forward facing images work best.</small>
+                                    <br>
+                                <br>
+                                    <button id="picture-submit" type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                                
+
+                                
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div>
-        <form role="form">
-            <div class="form-group row">
-              <label for="name-input">Name:</label>
-              <input class="form-control" id="name-input" type="text">
-            </div>
-            <div class="form-group row">
-              <label for="email-input">Email:</label>
-              <input class="form-control" id="image-input" type="email">
-            </div>
-            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
-          </form>
+            <!-- Uploaded Image / Recommended Thumbnails -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Emotion detection span id is "emotion-output"  PLaceholder is Happy!-->
+                        <img src="https://via.placeholder.com/400x400" class="img-fluid rounded-top" alt="img">
+                        <h1-6>We scanned your photo and have determined that you feel:<span class="badge" id="emotionDetect">Happy!</span></h1-6>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-            crossorigin="anonymous"></script>
-            <script src="assets/javascript/nathan.js"></script>
-            
-  
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body videoDiv">
+                        <!-- Image to be replaced by video thumbnails -->
+                        <img src="https://via.placeholder.com/400x400" class="img-fluid rounded-top" alt="img">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+            <!--****I had to replace the previous jQuery link because the SLIM version did not have the ability to do ajax responses-->
+
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+                crossorigin="anonymous"></script>
+           <script src="assets/javascript/nathan.js"></script>
+           <!-- <script src="youtube.js"></script> -->
 </body>
-
 
 </html>
