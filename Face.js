@@ -1,16 +1,14 @@
 var queryUrl = "https://api-us.faceplusplus.com/facepp/v3/detect"
 
 var parameters = {
-// -F "api_key=<api_key>" \
+
     "api_key": "MQpH7ljShXOJ9zHrKdDM5C6o96A0Qsbp",
     
-// -F "api_secret=<api_secret>" \
+
     "api_secret": "-9hs9__kJoKpcPpL9fEPWretNJDk40hf",
-// -F "image_file=@image_file.jpg" \
-    "image_url": "https://i.imgflip.com/vh6to.jpg",
-// -F "return_landmark=1" \
-    // "return_landmark": "1",
-// -F "return_attributes=gender,age"
+
+    "image_url": "https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/shutterstock_114522091.jpg?itok=a7EVvRFs",
+
     "return_attributes": "emotion"
 };
 
@@ -32,21 +30,21 @@ $.ajax({
     else if(emotionLvls.fear>60){
         $("#displaytext").text("You are "+emotionLvls.fear+ "% sad.")
     } 
-    else if(emotion.Lvls.anger>60){
+    else if(emotionLvls.anger>60){
         $("#displaytext").text("You are "+emotionLvls.anger+"% angry.")
     }
     else if(emotionLvls.disgust>60){
         $("#displaytext").text("You are "+emotionLvls.disgust+"% angry.")
     }
     else if(emotionLvls.happiness>60){
-        $("#displaytext").text("You are ".emotionLvls.happiness+ "% happy.")
+        $("#displaytext").text("You are "+emotionLvls.happiness+ "% happy.")
     }
     else if(emotionLvls.neutral>60){
         $("#displaytext").text("You are "+emotionLvls.neutral+ "% neutral.")
     }
     else if(emotionLvls.surprise>60){
         $("#displaytext").text("You are "+emotionLvls.surprise+ "% neutral.")
-    }
+    };
 
     
 });
