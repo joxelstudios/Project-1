@@ -23,3 +23,11 @@ Provide a seamless and efficient way to recommend music based on mood-detection 
 * As a user, I want to have the ability to use a profile photo.
 
 * As a  user, I want to be able to listen to the music recommended by the application on the same page. 
+
+## Acceptance Criteria 
+- [x] HTML has placeholders for images.
+- [x] HTML has a button to upload your own image and a text box to paste profile photo link.
+- [x] Firebase is configurated.
+- [x] FACE++ API is configured.
+- [ ] YouTube API is configured.
+- [ ] API systems are properly linked in master HTML
