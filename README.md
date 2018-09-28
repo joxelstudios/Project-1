@@ -20,5 +20,6 @@ Provide a seamless and efficient way to recommend music based on mood-detection 
 
 * As a user, I want to be able to upload a photo of myself and get recommended new music based on how I feel.
 
-* As user, I want to have the ability to use a profile photo.
+* As a user, I want to have the ability to use a profile photo.
 
+* As a  user, I want to be able to listen to the music recommended by the application on the same page. 
