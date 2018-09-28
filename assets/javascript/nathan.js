@@ -11,31 +11,31 @@
   var database = firebase.database();
 
  
-  // var connectionsRef = database.ref("/connections");
+  var connectionsRef = database.ref("/connections");
   
  
-  // var connectedRef = database.ref(".info/connected");
+  var connectedRef = database.ref(".info/connected");
   
 
-  // connectedRef.on("value", function(snap) {
+  connectedRef.on("value", function(snap) {
   
     
-  //   if (snap.val()) {
+    if (snap.val()) {
 
-  //     var con = connectionsRef.push(true);
+      var con = connectionsRef.push(true);
       
-  //     con.onDisconnect().remove();
-  //   }
-  // });
+      con.onDisconnect().remove();
+    }
+  });
   
 
   var image = "";
 
   // Capture Button Click
-  $("#image-input").on("click", function(event) {
+  $("#picture-submit").on("click", function(event) {
     event.preventDefault();
 
-    image = $("#image-input").val();
+    image = $("#facebook-link").val();
 
     database.ref().push({
       image: image,
@@ -50,7 +50,7 @@
   
     console.log(sv.image);
 
-    $("#emotionDetect-image").text(sv.name);
+    $("#emotionDetect-image").text(sv.image);
   
    }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
