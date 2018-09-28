@@ -21,4 +21,22 @@ $.ajax({
     data: parameters
 }).done(function(response){
     console.log(response);
-})
+    var emotionLvls = response.faces[0].attributes.emotion;
+    console.log(emotionLvls)
+    console.log(emotionLvls.sadness)
+
+    if(emotionLvls.sadness>60){
+        //We will display emotion text of whatever emotion is above 60%
+        $("#displaytext").text("You are " + emotionLvls.sadness +"% sad :(")
+    }
+});
+
+
+
+
+
+
+
+
+
+
