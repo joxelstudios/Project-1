@@ -64,9 +64,3 @@ $("#picture-submit").on('click', function(){
 
 
 })
-
-
-
-
-
-
