@@ -33,7 +33,7 @@
     <!-- Cards -->
     <div class="uk-container">
         <div class="row">
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-4 col-sm-12">
                 <div class="row">
                     <div class="col-12 text-center ">
                         <!-- Photo Upload Input -->
@@ -62,9 +62,9 @@
                 </div>
             </div>
             <!-- Uploaded Image / Recommended Thumbnails -->
-     
-            <div class="col-lg-6 col-m-12 col-sm-12">
-                <div class="uk-card-secondary  uk-animation-slide-right uk-card-hover">
+
+            <div class="col-lg-4 col-m-12 col-sm-12">
+                <div class="uk-card-secondary  uk-animation-fade uk-card-hover">
                     <div class="uk-card-body">
                         <!-- Emotion detection span id is "emotion-output"  PLaceholder is Happy!-->
                         <img src="https://via.placeholder.com/400x400" id="emotion-detect-image" class="img-fluid rounded-top"
@@ -82,6 +82,19 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="col-lg-4 col-m-12 col-sm-12">
+                <div class="uk-containter">
+                    <div class="uk-card-secondary  uk-animation-slide-right uk-card-hover">
+                        <div class="uk-card-body " id="otherImages" style="overflow-y: scroll; height:400px";>
+                            <h4>Here are what others are uploading!</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <br>
 
@@ -95,14 +108,14 @@
                             <thead>
                                 <tr>
                                     <th>Artist Name</th>
-                                    <th>Artist Info</th>
+                                    <th>Most Popular Songs</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <tr>
-                                    <td id="artist-name">Table Data</td>
-                                    <td id="artist-info">Table Data</td>
+                                    <td id="artist-name"></td>
+                                    <td id="artist-info"></td>
 
                                 </tr>
 

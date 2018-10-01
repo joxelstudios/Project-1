@@ -50,7 +50,7 @@
   
     console.log(sv.image);
 
-    $("#emotion-detect-image").attr('src',sv.image);
+    $("#otherImages").append($('<img class= "uk-margin-small-top">').attr('src', sv.image));
   
    }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
