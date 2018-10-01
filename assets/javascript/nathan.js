@@ -50,7 +50,7 @@
   
     console.log(sv.image);
 
-    $("#emotionDetect-image").attr('src',sv.image);
+    $("#emotion-detect-image").attr('src',sv.image);
   
    }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
