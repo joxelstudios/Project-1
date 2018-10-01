@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Project 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Jumbotron Header -->
+    <div class="jumbotron text-center">
+        <h1 class="display-3">Upload a photo of yourself</h1>
+        <p class="lead">and we will recommend music based on your expression.</p>
+        <hr class="my-2">
+        <p>Demonstrating the power of machine-learning</p>
+        <p class="lead">
+
+        </p>
+    </div>
+    <!-- Cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Photo Upload Input -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title ">Upload a photo or link your Facebook Profile Image</h4>
+                                <p class="card-text">So we can gauge how you feel.</p>
+                                <hr>
+                                <input id="picture-input" type='file' onchange="readURL(this);" />
+                                <div class="form-group">
+                                    <label for="facebook-link"></label>
+                                    <input type="text" class="form-control" name="facebook-link" id="facebook-link"
+                                        aria-describedby="helpId" placeholder="Paste link to profile image.">
+                                    <small id="helpId" class="form-text text-muted">*Forward facing images work best.</small>
+                                    <br>
+                                    <br>
+                                    <button id="picture-submit" type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Uploaded Image / Recommended Thumbnails -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Emotion detection span id is "emotion-output"  PLaceholder is Happy!-->
+                        <img src="https://via.placeholder.com/400x400" id="emotionDetect-image" class="img-fluid rounded-top"
+                            alt="img">
+                        <h1-6>We scanned your photo and have determined that you feel:<span class="badge" id="emotionDetect">Happy!</span></h1-6>
+                        <p id="emot2"></p>
+                        <p id="emot3"></p>
+                        <p id="emot4"></p>
+                        <p id="emot5"></p>
+                        <p id="emot6"></p>
+                        <p id="emot7"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body videoDiv">
+                        <div id="player"></div>
+                        <div id="artist-name"></div>
+                        <div id="artist-info"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+            <!--****I had to replace the previous jQuery link because the SLIM version did not have the ability to do ajax responses-->
+
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+                crossorigin="anonymous"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+            <!-- <script src="assets/javascript/Face.js"></script> -->
+            <script src ="assets/javascript/Face-youtube-branch.js"></script>
+            <script src="assets/javascript/nathan.js"></script>
+            <!-- <script src="youtube.js"></script> -->
+
+</body>
+
+</html>
