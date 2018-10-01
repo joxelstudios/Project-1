@@ -2,12 +2,14 @@ var queryUrl = "https://api-us.faceplusplus.com/facepp/v3/detect"
 
 
 
-
+//Setting up a click listener to dynamically call information from Face++ and LastFM APIs and create content based off the relevant JSON response data
 $("#picture-submit").on('click', function () {
+    //Empty the submit form and the information displays
     $("#player").empty();
     $("#artist-info").empty();
     $("#artist-name").empty();
-    var link = $("#facebook-link").val().trim()
+    var link = $("#facebook-link").val().trim();
+    $("#emotion-detect-image").attr("src", link);
 
 
 
@@ -51,7 +53,6 @@ $("#picture-submit").on('click', function () {
             var randomSadArtist = sadArtists[randomNumberOne];
             console.log(randomSadSong)
             console.log(randomSadArtist)
-            //below code will embed the iFrame player and plug in the random song for that emotion 
             var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
@@ -64,13 +65,13 @@ $("#picture-submit").on('click', function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response)
-                //      we will most likely need to build a for loop to iterate over the response track name til a certain point
                 var topTrack1 = (response.toptracks.track[0].name);
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
-                console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomSadArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                //Display information gathered from LastFM API
+                console.log("Most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
+                $("#artist-name").text( randomSadArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
         }
 
@@ -113,8 +114,9 @@ $("#picture-submit").on('click', function () {
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
                 console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomSadArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                //Display information gathered from LastFM API
+                $("#artist-name").text( randomSadArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
 
         }
@@ -154,8 +156,8 @@ $("#picture-submit").on('click', function () {
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
                 console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomAngryArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                $("#artist-name").text(randomAngryArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
         }
         else if (emotionLvls.disgust > 60) {
@@ -171,7 +173,7 @@ $("#picture-submit").on('click', function () {
             var angrySongArray = ["CCC8vCxEXQo", "0ZE1bmcWMUY", "Qt616BtpD-w", "RD_kgKyDk6c", "ZrFTR9fucr8", "Wh-Jf_udRhs", "hgER9_Od0Ck", "SVwTF7Nw3-w", "T4B5gT3TtJQ"];
             //Array of artists, matching index positions of the respective songs in var sadness
             var angryArtists = ["Trampa", "August Burns Red", "Hatebreed", "Ramones", "I Wrestled A Bear Once", "Funtcase", "Twine", "Technical Itch", "Hatebreed"];
-            var randomNumberOne = Math.floor(Math.random() * angrySongArray.length)
+            var randomNumberOne = Math.floor(Math.random() * angrySongArray.length);
             //Applying the random index number to both arrays and setting both resulting index positions to a usabel variable
             var randomAngrySong = angrySongArray[randomNumberOne];
             var randomAngryArtist = angryArtists[randomNumberOne];
@@ -193,8 +195,8 @@ $("#picture-submit").on('click', function () {
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
                 console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomAngryArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                $("#artist-name").text(randomAngryArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
         }
         else if (emotionLvls.happiness > 60) {
@@ -205,7 +207,7 @@ $("#picture-submit").on('click', function () {
             $("#emot5").text(emotionLvls.surprise + "% surprised.");
             $("#emot6").text(emotionLvls.neutral + "% neutral.");
             $("#emot7").text(emotionLvls.fear + "% fearful.");
-            //Array of sad songs to pick from
+            //Array of happy songs to pick from
             var happySongArray = ["NCkM8zFPALo", "tCnBrrnOefs", "mMfxI3r_LyA", "xumGNwplds8", "GHUc6juS0YQ", "kfVsfOSbJY0"];
             //Array of artists, matching index positions of the respective songs in var sadness
             var happyArtists = ["4AM", "Justice", "Modjo", "Stardust", "James Brown", "Rebecca Black"];           
@@ -233,8 +235,8 @@ $("#picture-submit").on('click', function () {
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
                 console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomHappyArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                $("#artist-name").text(randomHappyArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
         }
         else if (emotionLvls.neutral > 60) {
@@ -273,8 +275,8 @@ $("#picture-submit").on('click', function () {
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
                 console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomNeutralArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                $("#artist-name").text(randomNeutralArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
         }
         else if (emotionLvls.surprise > 60) {
@@ -308,33 +310,18 @@ $("#picture-submit").on('click', function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response)
-                //      we will most likely need to build a for loop to iterate over the response track name til a certain point
                 var topTrack1 = (response.toptracks.track[0].name);
                 var topTrack2 = (response.toptracks.track[1].name);
                 var topTrack3 = (response.toptracks.track[2].name);
                 console.log("most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3)
-                $("#artist-name").text("Artist: " + randomNeutralArtist)
-                $("#artist-info").append("Artist's most popular songs: " + topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
+                //Display information gathered from LastFM API
+                $("#artist-name").text(randomNeutralArtist)
+                $("#artist-info").append(topTrack1 + ", " + topTrack2 + ", " + topTrack3 + ".");
             });
         };
     });
+    $("#facebook-link").val("");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

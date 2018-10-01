@@ -40,7 +40,9 @@
     database.ref().push({
       image: image,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
+      
     });
+    $("#emotion-detect-image").attr('src',image)
 
   });
 
@@ -50,7 +52,7 @@
   
     console.log(sv.image);
 
-    $("#emotionDetect-image").attr('src',sv.image);
+    $("#otherImages").append($('<img class= "uk-margin-small-top">').attr('src', sv.image));
   
    }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
