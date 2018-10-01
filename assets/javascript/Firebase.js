@@ -52,7 +52,7 @@
   
     console.log(sv.image);
 
-    $("#otherImages").append($('<img class= "uk-margin-small-top">').attr('src', sv.image));
+    $("#otherImages").prepend($('<img class= "uk-margin-small-top" width= "300px" height="auto">').attr('src', sv.image));
   
    }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
