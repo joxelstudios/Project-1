@@ -40,7 +40,9 @@
     database.ref().push({
       image: image,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
+      
     });
+    $("#emotion-detect-image").attr('src',image)
 
   });
 
