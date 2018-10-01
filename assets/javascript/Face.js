@@ -53,7 +53,10 @@ $("#picture-submit").on('click', function () {
             console.log(randomSadArtist)
             //below code will embed the iFrame player and plug in the random song for that emotion 
             var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
-            $("#player").append(newYTiFrame)
+            $("#player").append(newYTiFrame);
+
+            // Makes video use a fade in animation.
+            $("#player").addClass("uk-animation-fade")
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
@@ -100,6 +103,7 @@ $("#picture-submit").on('click', function () {
             //We embed the iFrame player and plug in the random song for that emotion 
             var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
+            
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
