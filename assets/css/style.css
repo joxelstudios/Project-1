@@ -18,3 +18,9 @@
     font-family: 'Syncopate', sans-serif;
 
 }
+
+#modal-button{
+    color: #a239ca;
+    transform: scale(.8);
+    border-color: #a239ca;
+}
