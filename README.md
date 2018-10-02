@@ -36,11 +36,11 @@ Provide a seamless and efficient way to recommend music based on mood-detection 
 
 ### SADNESS IMAGES
 
-https://images.pexels.com/photos/679438/pexels-photo-679438.jpeg?auto=compress&cs=tinysrgb&h=350
+https://ubisafe.org/images/depressing-clipart-sad-situation-6.jpg
 
 https://i.imgflip.com/vh6to.jpg
 
-http://1.bp.blogspot.com/-6T2dCFwO5jE/TgJcklxjviI/AAAAAAAAAJM/BcE2z91RNwY/s1600/sad-kid.jpg
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRifOuzgpIhbWZqdBNo7Ax1frN9zaVDCMNQuUdpqYx-8PVzvIvDXA
 
 https://i.yomyomf.com/wp-content/uploads/2013/09/cry1.jpg
 
