@@ -24,3 +24,18 @@
     transform: scale(.8);
     border-color: #a239ca;
 }
+
+#picture-submit{
+    color:#a239ca;
+    background-color: transparent;
+    border-color: #a239ca;
+    font-size: 77%;
+}
+    
+
+#picture-submit,
+#modal-button{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+ 
