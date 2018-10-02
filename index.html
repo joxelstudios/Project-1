@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Project 1</title>
+    <title>Face The Music</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,16 +14,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/css/uikit.min.css" />
 
     <!-- Custom CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
 </head>
 
 <body class="body">
     <!-- Jumbotron Header -->
     <div class="jumbotron uk-width-1-1 text-center uk-background-secondary uk-container uk-animation-slide-top">
-
         <h1 class="title uk-heading-primary uk-position-top uk-light">FACE THE MUSIC</h1>
         <br>
         <p class="lead uk-light">A blend of music and machine-learning.</p>
@@ -51,7 +50,7 @@
                                     <br>
                                     <button id="picture-submit" type="submit" class="uk-button-secondary">Submit</button>
                                     <br>
-                                    <h3>See our music recommendation below.</h3>
+                                    <h3 id="see-recommendation"></h3>
                                 </div>
 
 
@@ -71,14 +70,28 @@
                         <img src="https://via.placeholder.com/400x400" id="emotion-detect-image" class="img-fluid rounded-top"
                             alt="img">
                         <br>
-                        <h1-6 class="accentText">We scanned your photo and have determined that you feel:<span class="badge"
-                                id="emotionDetect">Happy!</span></h1-6>
-                        <p id="emot2"></p>
-                        <p id="emot3"></p>
-                        <p id="emot4"></p>
-                        <p id="emot5"></p>
-                        <p id="emot6"></p>
-                        <p id="emot7"></p>
+                        <h1-6 class="accentText" id="determine-text">We scanned your photo and have determined that you
+                            feel:<span class="badge" id="emotionDetect">Happy!</span></h1-6>
+                        <br><br>
+
+                        <a class="uk-button uk-button-default" id="modal-button" href="#modal-center" uk-toggle>Full
+                            Analysis</a>
+
+                        <div id="modal-center" class="uk-flex-top" uk-modal>
+                            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                <p id="emot1"></p>
+                                <p id="emot2"></p>
+                                <p id="emot3"></p>
+                                <p id="emot4"></p>
+                                <p id="emot5"></p>
+                                <p id="emot6"></p>
+                                <p id="emot7"></p>
+
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
