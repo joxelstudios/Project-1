@@ -55,12 +55,12 @@ $("#picture-submit").on('click', function () {
             var randomSadArtist = sadArtists[randomNumberOne];
             console.log(randomSadSong)
             console.log(randomSadArtist)
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomSadArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomSadArtist + "&api_key=" + lastKey + "&format=json";
 
             $.ajax({
                 url: queryURLTopTrack,
@@ -102,12 +102,12 @@ $("#picture-submit").on('click', function () {
             console.log(randomSadSong)
             console.log(randomSadArtist)
             //We embed the iFrame player and plug in the random song for that emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomSadSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomSadArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomSadArtist + "&api_key=" + lastKey + "&format=json";
             $.ajax({
                 url: queryURLTopTrack,
                 method: "GET"
@@ -145,12 +145,12 @@ $("#picture-submit").on('click', function () {
             console.log(randomAngrySong)
             console.log(randomAngryArtist)
             //We embed the iFrame player and plug in the random song for that emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomAngrySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomAngrySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomAngryArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomAngryArtist + "&api_key=" + lastKey + "&format=json";
             $.ajax({
                 url: queryURLTopTrack,
                 method: "GET"
@@ -185,12 +185,12 @@ $("#picture-submit").on('click', function () {
             console.log(randomAngrySong)
             console.log(randomAngryArtist)
             //We embed the iFrame player and plug in the random song for that emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomAngrySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomAngrySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomAngryArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomAngryArtist + "&api_key=" + lastKey + "&format=json";
             $.ajax({
                 url: queryURLTopTrack,
                 method: "GET"
@@ -225,12 +225,12 @@ $("#picture-submit").on('click', function () {
             console.log(randomHappySong)
             console.log(randomHappyArtist)
             //We embed the iFrame player and plug in the random song for that emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomHappySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomHappySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomHappyArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomHappyArtist + "&api_key=" + lastKey + "&format=json";
             $.ajax({
                 url: queryURLTopTrack,
                 method: "GET"
@@ -266,12 +266,12 @@ $("#picture-submit").on('click', function () {
             console.log(randomNeutralSong)
             console.log(randomNeutralArtist)
             //We embed the iFrame player and plug in the random song for the corresponding emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomNeutralSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomNeutralSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomNeutralArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomNeutralArtist + "&api_key=" + lastKey + "&format=json";
             $.ajax({
                 url: queryURLTopTrack,
                 method: "GET"
@@ -307,12 +307,12 @@ $("#picture-submit").on('click', function () {
             console.log(randomNeutralSong)
             console.log(randomNeutralArtist)
             //We embed the iFrame player and plug in the random song for the corresponding emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/" + randomNeutralSong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomNeutralSong + "?autoplay=1' origin='https://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
             var lastKey = "ede245c0055f703efd5f136a5301a6bf";
-            var queryURLTopTrack = "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomNeutralArtist + "&api_key=" + lastKey + "&format=json";
+            var queryURLTopTrack = "https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&limit=10&artist=" + randomNeutralArtist + "&api_key=" + lastKey + "&format=json";
             $.ajax({
                 url: queryURLTopTrack,
                 method: "GET"
