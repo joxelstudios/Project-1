@@ -255,9 +255,9 @@ $("#picture-submit").on('click', function () {
             $("#emot6").text(emotionLvls.sadness + "% sad.");
             $("#emot7").text(emotionLvls.fear + "% fearful.");
             //Array of neutral songs to pick from
-            var neutralSongArray = ["6zf6yce6g7g", "yvK3t0TdYfQ", "A5o4fn5imNw", "zfcHq0hhFWg", "EAEKK8xCpBY", "_FrOQC-zEog", "Pz1W1OLkw14", "3Q9rewnLFYw", "slldMEPvUqA", "0KJHH08FPpE", "_BObK59njSg", "Rx6LDRRz2Gs"];
+            var neutralSongArray = ["6zf6yce6g7g", "yvK3t0TdYfQ", "zfcHq0hhFWg", "EAEKK8xCpBY", "_FrOQC-zEog", "Pz1W1OLkw14", "3Q9rewnLFYw", "slldMEPvUqA", "0KJHH08FPpE", "_BObK59njSg", "Rx6LDRRz2Gs"];
             //Array of artists, matching index positions of the respective songs in var sadness
-            var neutralArtists = ["Killedmyself", "Morning High", "Shogondo", "Tame Impala", "Dispatch", "Pink Floyd", "High Contrast", "Flux Pavillion", "The Whispers", "Volac", "Washed Out", "Dj Marky"]
+            var neutralArtists = ["Killedmyself", "Morning High", "Tame Impala", "Dispatch", "Pink Floyd", "High Contrast", "Flux Pavillion", "The Whispers", "Volac", "Washed Out", "Dj Marky"]
             //Determining a random index number for both song and artist arrays
             var randomNumberOne = Math.floor(Math.random() * neutralSongArray.length)
             //Applying the random index number to both arrays and setting both resulting index positions to a usabel variable
@@ -296,9 +296,9 @@ $("#picture-submit").on('click', function () {
             $("#emot6").text(emotionLvls.neutral + "% neutral.");
             $("#emot7").text(emotionLvls.fear + "% fearful.");
             //Array of neutral songs to pick from
-            var neutralSongArray = ["6zf6yce6g7g", "yvK3t0TdYfQ", "A5o4fn5imNw", "zfcHq0hhFWg", "EAEKK8xCpBY", "_FrOQC-zEog", "Pz1W1OLkw14", "3Q9rewnLFYw", "slldMEPvUqA", "0KJHH08FPpE", "_BObK59njSg", "Rx6LDRRz2Gs"];
+            var neutralSongArray = ["6zf6yce6g7g", "yvK3t0TdYfQ", "zfcHq0hhFWg", "EAEKK8xCpBY", "_FrOQC-zEog", "Pz1W1OLkw14", "3Q9rewnLFYw", "slldMEPvUqA", "0KJHH08FPpE", "_BObK59njSg", "Rx6LDRRz2Gs"];
             //Array of artists, matching index positions of the respective songs in var sadness
-            var neutralArtists = ["Killedmyself", "Morning High", "Shogondo", "Tame Impala", "Dispatch", "Pink Floyd", "High Contrast", "Flux Pavillion", "The Whispers", "Volac", "Washed Out", "Dj Marky"]
+            var neutralArtists = ["Killedmyself", "Morning High", "Tame Impala", "Dispatch", "Pink Floyd", "High Contrast", "Flux Pavillion", "The Whispers", "Volac", "Washed Out", "Dj Marky"]
             //Determining a random index number for both song and artist arrays
             var randomNumberOne = Math.floor(Math.random() * neutralSongArray.length)
             //Applying the random index number to both arrays and setting both resulting index positions to a usabel variable
