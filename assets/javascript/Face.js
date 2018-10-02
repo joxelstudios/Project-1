@@ -145,7 +145,7 @@ $("#picture-submit").on('click', function () {
             console.log(randomAngrySong)
             console.log(randomAngryArtist)
             //We embed the iFrame player and plug in the random song for that emotion 
-            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomAngrySong + "?autoplay=1' origin='http://example.com' frameborder='0'></iframe>")
+            var newYTiFrame = $("<iframe id='player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/" + randomAngrySong + "?autoplay=1' origin='https://example.com' frameborder='0'></iframe>")
             $("#player").append(newYTiFrame)
 
             //Calling LastFM API to gather information on the artist of the current song.
